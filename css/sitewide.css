@@ -1,0 +1,159 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/*
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+body {
+	font-family: "Cantarell", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #222;
+}
+
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area.
+	If you have more than one container, you are probably doing
+	something wrong.
+*/
+.container {
+	background-color: #FFFAFA;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* media query containing styles for larger screens */
+@media (min-width: 720px) {
+
+	/* container on larger screens */
+	.container {
+		width: 100%;
+		max-width: 1800px;
+		margin: 0em;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 1em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+.global-nav ul {
+	display: flex;
+	padding: 0;
+	align-content: center;
+}
+
+.global-nav li {
+	flex: 1 200px;
+	list-style-type: none;
+}
+
+.global-nav a {
+		text-decoration: none;
+}
+
+.title{
+	font-size: 60px;
+	line-height: 50px;
+	color: #010328;
+}
+
+.caption{
+	grid-columns: 1/3;
+	grid-row: 3/4;
+	font-size: 35px;
+	align-content: center;
+}
+
+.sub{
+	font-family: "Cantarell";
+	font-size: 28px;
+	font-weight: 300;
+	color: #F8B86B;
+	grid-columns: 1/3;
+	padding-bottom: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #FF7518;
+	border-spacing: 2px;
+	margin-bottom: 2em;
+	padding-bottom: .8em;
+}
+
+.video{
+	grid-column: 1/3;
+	grid-row: 2/3;
+	max-width: 100%;
+	height: auto;
+	background-size: cover;
+}
+
+.image{
+	grid-columns: 2/3;
+	grid-row: 3/4;
+	opacity: .8;
+	width: 350px;
+	height: 400px;
+	padding: 2em;
+}
+.welcome{
+	grid-columns: 1/2;
+	grid-row: 4/5;
+	color: #010328;
+}
+
+.about{
+	grid-column: 1/2;
+	grid-row: 5/6;
+	color: #010328;
+}
+
+.aboutimage{
+	grid-column: 1/2;
+	grid-row: 5/6;
+	opacity: .5;
+}
+
+.food{
+	grid-columns: 2/3;
+	grid-row: 6/7;
+}
+
+.media{
+	grid-columns: 1/2;
+	grid-row: 7/8;
+}
+
+.restaurants{
+	grid-columns: 1/2;
+	grid-row: 8/9;
+}
+
+.uncharted{
+	grid-columns: 1/2;
+	grid-row: 9/10;
+}
+
+} /* end media query */
